@@ -1,0 +1,34 @@
+
+<div class="container">
+    <h3 class="h3">Dell</h3>
+    <div class="row">
+    {% for p in dell %}
+        <div class="col-md-3 col-sm-6">
+            <div class="product-grid">
+                <div class="product-image">
+                    <a href="/delldetail/{{p.id}}">
+                        <img class="pic-1" src="/media/{{p.dellpic}}">
+                    </a>
+                    <span class="product-new-label">Sale</span>
+                    <span class="product-discount-label">{{ p.delldiscount }}%</span>
+                </div>
+                <ul class="rating">
+                    <li class="fa fa-star"></li>
+                    <li class="fa fa-star"></li>
+                    <li class="fa fa-star"></li>
+                    <li class="fa fa-star"></li>
+                    <li class="fa fa-star disable"></li>
+                </ul>
+                <div class="product-content">
+                    <h3 class="title"><a href="/delldetail/{{p.id}}">{{ p.dellname }}</a></h3>
+                    <div class="price">{{ p.dellprice }}
+                        <span>44500</span>
+                    </div>
+                    <a class="add-to-cart" href="/scart/{{p.id}}">+ Add To Cart</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+        </div>
+    </div>
+</div>

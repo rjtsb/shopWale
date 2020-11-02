@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>e-Commerce || shopWale.in</title>
+    <style type="text/css">
+    {% include 'bootstrap.html' %}
+</style>
+</head>
+<body>
+	<div id="messages"></div>
+
+{% include "header.html" %}
+
+{% include 'product.html' %}
+{% block content %}
+
+{% endblock %}
+{% include "footer.html" %}
+</body>
+</html>

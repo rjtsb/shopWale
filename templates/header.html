@@ -1,0 +1,80 @@
+{% load static %}
+<head>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/header.css' %}">
+</head>
+{% include 'bootstrap.html' %}
+<div class="container-fluid p-0 header my-2">
+	<div class="row">
+		<div class="col-md-12 p-0">
+			<div class="logo col-md-4 p-0">
+				<h1 class="logo"><a href="../">shopWale.in</a></h1>
+			</div>
+			<div class="title col-md-4 p-0">eCOMMERCE</div>
+      {% if rs %}
+      <div class="col-md-4 header-links p-0">
+        <a href="../profile" class="btn btn-sm header-item px-3 mx-2">{{rs.name}}</a>
+        <a href="" class="btn btn-sm header-item px-3 mx-2">Cart <i class="fa fa-shopping-cart"></i></a>
+      </div>
+      {% else %}
+			<div class="col-md-4 header-links p-0">
+          {% include 'header-links.html' %}
+			</div>
+      {% endif %}
+		</div>
+	</div>
+	<div class="col-md-2 btn-danger"></div>
+	<div class="container col-md-8 p-0 text-center">
+		<div class="btn-group mx-3 my-1">
+  			<a href="../mobile" class="btn btn-secondary btn-sm" type="button" aria-expanded="false">Mobiles</a>
+		</div>
+		<div class="btn-group mx-3 my-1">
+        <a href="../laptop" class="btn btn-secondary btn-sm" type="button" aria-expanded="false">Laptop</a>
+    </div>
+		<div class="btn-group mx-3 my-1">
+        <a href="../mens" class="btn btn-secondary btn-sm" type="button" aria-expanded="false">Mens</a>
+    </div>
+		<div class="btn-group mx-3 my-1">
+        <a href="../about" class="btn btn-light btn-sm ml-3" type="button" aria-expanded="false">About us</a>
+    </div>
+		<div class="btn-group mx-3 my-1">
+        <a href="../contact" class="btn btn-light btn-sm m-0" type="button" aria-expanded="false">Contact us</a>
+    </div>
+		
+	</div>
+  <div class="col-md-2 bg-danger"></div>
+</div>
+<div id="carouselExampleIndicators" class="carousel slide " data-ride="carousel" >
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+  </ol>
+  <div class="carousel-inner" >
+    <div class="carousel-item active tr">
+      <a href="../mobile"><img src="{% static 'imgs/slider/slider-1.jpg' %}" class="d-block w-100" alt="..."></a>
+    </div>
+    <div class="carousel-item tr">
+      <a href="../mens"><img src="{% static 'imgs/slider/slider-2.jpg' %}" class="d-block w-100" alt="..."></a>
+    </div>
+    <div class="carousel-item tr">
+      <a href="../laptop"><img src="{% static 'imgs/slider/slider-3.jpg' %}" class="d-block w-100" alt="..."></a>
+    </div>
+    <div class="carousel-item tr">
+      <a href="../mobile"><img src="{% static 'imgs/slider/slider-4.jpg' %}" class="d-block w-100" alt="..."></a>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+<!--Modal-->
+
+{% include 'login.html' %}
+
+{% include 'signup.html' %}

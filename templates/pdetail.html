@@ -1,0 +1,55 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		
+	</style>
+{% include 'bootstrap.html' %}
+</head>
+<body>
+{% block content %}
+{% include 'header.html' %}
+
+
+<div class="container">
+	<div class="row">
+		<form>
+			<table class="table">
+				<tr>
+				<th class="text-center bg-light p-0 my-2" colspan="2"><h3>{{records.obrand}}</h3></th>
+				</tr><br>
+				<tr>
+					<td rowspan="5"><img src="/media/{{records.opic}}" width="600px" height="550px"></td>
+					<th><strong>Product Name:</strong><br>{{records.oname}}</th>
+				</tr>
+				<tr>
+					<td><strong>Description:</strong><br>{{records.odesc}}</td>
+				</tr>
+				<tr>
+					<td><strong>Price:</strong><br>{{records.oprice}}</td>
+				</tr>
+				<tr>
+					<td><strong>Discount:</strong><br>{{records.odiscount}}% OFF</td>
+				</tr>
+
+				<tr>
+					<td>
+					<a href="" class="btn btn-warning">Add to Cart</a>
+					</td>
+					<td>
+						<a href="" class="btn btn-danger">Buy Now</a>
+					</td>
+				</tr>
+
+				<tr><td></td></tr>
+
+
+			</table>
+		</form>
+	</div>
+</div>
+{% endblock %}
+</body>
+</html>

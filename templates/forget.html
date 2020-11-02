@@ -1,0 +1,19 @@
+{% load static %}
+<head>
+  <script type="text/javascript" src="{% static '/js/validation.js' %}"></script>
+</head>
+{% include 'header.html' %}
+<div class="container">
+	<h3 class="text-center my-3 bg-dark text-light p-1">Reset Your Password!</h3>
+<form method="post" action="../mail/" name="loginform" onsubmit="return validate();">
+	{% csrf_token %}
+	<table class="table">
+		<tr>
+		<div class="form-group">
+			<td><input type="email" name="email" placeholder="Enter your Email" class="form-control"></td>
+		</div>
+		</tr>
+		<tr><td><input type="submit" name="forget" value="Send Password" class="btn btn-primary"></td></tr>
+	</table>
+</form>
+</div>

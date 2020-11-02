@@ -1,0 +1,42 @@
+{% include "header.html" %}
+{% block content %}
+
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+        <br>
+        <form method="post" action="../update/{{rs.id}}" class="form-horizontal bg-light">
+            {% csrf_token %}
+            <h3 class="text-center">Edit details</h3>
+            <div class="form-group has-success px-3" >
+                <label class="control-label mx-3" >Name:</label>
+                <input type="text" name="name" value="{{rs.name}}" class="form-control" />
+            </div>
+            <div class="form-group px-3" >
+                <label class="control-label mx-3" >Email:</label>
+                <input type="email" name="email" value="{{rs.email}}" class="form-control" readonly="" />
+            </div>
+            <div class="form-group px-3" >
+                <label class="control-label mx-3" >Mobile:</label>
+                <input type="number" name="mobile" value="{{rs.mobile}}" class="form-control" />
+            </div>
+            <div class="form-group px-3" >
+                <label class="control-label mx-3" >Password:</label>
+                <input type="password" name="password" value="{{rs.password}}" class="form-control" />
+            </div>
+            <div class="form-group px-3" >
+                <label class="control-label mx-3" >Address:</label>
+                <input type="text" name="address" value="{{rs.address}}" class="form-control" />
+            </div>
+            <div class="form-group px-3" >
+                <label class="control-label mx-3" >Pincode:</label>
+                <input type="number" name="pin" value="{{rs.pin}}" class="form-control" />
+            </div>
+            <div class="form-group px-3 text-center" >
+               <button type="submit" name="update" class="btn btn-success rounded-pill btn-sm px-3">UPDATE</button>
+            </div>
+        </form>
+    </div>
+    <div class="col-md-3"></div>
+</div>
+{% endblock %}

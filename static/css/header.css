@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@800&display=swap');
+		@import url('https://fonts.googleapis.com/css2?family=Marck+Script&display=swap');
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		.header{
+			background-color: #41d6c3;
+			padding:0;
+			margin: 0;
+		}
+		.logo{
+			float: left;
+			text-align: center;
+			padding-left: 50px;
+			padding-top: 5px;
+			font-size: 2rem;
+			font-family: 'Marck Script', cursive;
+			top: 20px;
+			color: #000;
+			text-decoration: none;
+		}
+		.logo:hover{
+			color: #fff;
+			transition: .5s ease;
+		}
+		.title{
+			float: left;
+			font-family: 'Orbitron', sans-serif;
+			text-align: center;
+			font-size: 2rem;
+			color: #f0f3f6;
+		}
+		.header-links{
+			float: left;
+			text-align: center;
+			margin-top: 25px;
+			font-size: 15px;
+		}
+		.header-item{
+			color: white !important;
+			font-size: 15px !important;
+			font-weight: bolder !important;
+			border: 1px solid #000 !important;
+			border-radius: 20px !important;
+		}
+		.header-item:hover{
+			background-color: white;
+			color:  #41d6c3 !important;
+			transition: .5s ease;
+			font-weight: bolder;
+		}
+		.z{
+			z-index: 10 !important;
+		}

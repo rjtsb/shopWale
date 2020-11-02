@@ -1,0 +1,25 @@
+{% load static %} <!doctype html>
+<html lang="en">
+  <head>
+
+    {% include 'bootstrap.html' %}
+    <script src="kart.js"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+  </head>
+  <body>
+  {% include 'header.html' %}
+ 
+<!--Men's Shoes-->
+
+{% block shoes %}
+{% include 'shoe.html' %}
+{% endblock %}
+
+<!--MEN'S Jeans-->
+{% include 'jeans.html' %}
+
+<!--Mens watches-->
+
+{% include 'watch.html' %}
+</body>
+</html>

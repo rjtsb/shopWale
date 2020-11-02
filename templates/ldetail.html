@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+{% include 'bootstrap.html' %}
+</head>
+<body>
+{% block content %}
+{% include 'header.html' %}
+
+
+<div class="container">
+	<div class="row">
+		<form>
+			<table class="table">
+				<tr>
+				<th class="text-center bg-light p-0 my-2" colspan="2"><h3>{{records.lbrand}}</h3></th>
+				</tr><br>
+				<tr>
+					<td rowspan="5"><img src="/media/{{records.lpic}}" width="600px" height="550px"></td>
+					<th><strong>Product Name:</strong><br>{{records.lname}}</th>
+				</tr>
+				<tr>
+					<td><strong>Description:</strong><br>{{records.ldesc}}</td>
+				</tr>
+				<tr>
+					<td><strong>Price:</strong><br>{{records.lprice}}</td>
+				</tr>
+				<tr>
+					<td><strong>Discount:</strong><br>{{records.ldiscount}}% OFF</td>
+				</tr>
+
+				<tr>
+					<td>
+					<a href="" class="btn btn-warning">Add to Cart</a>
+					</td>
+					<td>
+						<a href="" class="btn btn-danger">Buy Now</a>
+					</td>
+				</tr>
+
+				<tr><td></td></tr>
+
+
+			</table>
+		</form>
+	</div>
+</div>
+{% endblock %}
+</body>
+</html>

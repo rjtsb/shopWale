@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		
+	</style>
+{% include 'bootstrap.html' %}
+</head>
+<body>
+{% block content %}
+<!------------------------------------------------>
+
+<div class="container-fluid text-center my-3">
+	<h2 class="my-3 bg-dark text-light container p-1">Product category</h2><br>
+	<div id="recipeCarousel" class="carousel slide w-100 my-3" data-ride="carousel" >
+		<div class="carousel-inner w-100" role="listbox">
+			<div class="carousel-item row no-gutters active">
+				<div class="col-3 float-left"><a href="../laptop"><img src="{% static 'imgs/product/laptop.jpg' %}" style="height: 200px;" class="img-fluid"></a></div>
+				<div class="col-3 float-left"><a href="../mobile"><img src="{% static 'imgs/product/mobile.jpg' %}" style="height: 200px;" class="img-fluid"></a></div>
+				<div class="col-3 float-left"><a href="../mens"><img src="{% static 'imgs/product/pc3.jpg' %}" style="height: 200px;" class="img-fluid"></a></div>
+				<div class="col-3 float-left"><a href="../mens"><img src="{% static 'imgs/product/pc4.jpg' %}" style="height: 200px;"s class="img-fluid"></a></div>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}
+</body>
+</html>
